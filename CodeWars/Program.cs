@@ -31,15 +31,7 @@ namespace CodeWars
             int stringLength = str.ToLower().Length;
             int stringArrayLength = new String(str.ToLower().Distinct().ToArray()).Length;
 
-            if (stringLength == stringArrayLength)
-            {
-                return true;
-            }
-            else if (stringLength > stringArrayLength)
-            {
-                return false;
-            }
-            return true;
+            return (stringLength == stringArrayLength) ? true : false;
         } 
     }
 
