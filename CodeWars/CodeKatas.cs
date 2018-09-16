@@ -55,20 +55,7 @@ namespace CodeWars
             => 15 ...
             => 1 + 5
             => 6
-            
-            digital_root(132189)
-            => 1 + 3 + 2 + 1 + 8 + 9
-            => 24 ...
-            => 2 + 4
-            => 6
-            
-            digital_root(493193)
-            => 4 + 9 + 3 + 1 + 9 + 3
-            => 29 ...
-            => 2 + 9
-            => 11 ...
-            => 1 + 1
-            => 2
+           
          */
         
         public int DigitalRoot(long n)
@@ -89,14 +76,23 @@ namespace CodeWars
                 
             }
 
-            string valueOfRecursiveSum = recursiveSum.ToString();
-            var lengtOfRecursiveArray = valueOfRecursiveSum.ToCharArray().Length;
-            while (lengtOfRecursiveArray > 1)
+          
+            while (recursiveSum > 10)
             {
                 return DigitalRoot(recursiveSum);
             }
            
             return recursiveSum;
+        }
+        
+        /*
+         * Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+         * Example For inputArray = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(inputArray) = 21
+           7 and 3 produce the largest product.
+         */
+        public int AdjacentElementsProduct(int[] arrayOfInts)
+        {
+            return 2;
         }
     }
 }
